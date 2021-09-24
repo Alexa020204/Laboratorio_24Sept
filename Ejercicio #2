@@ -1,0 +1,13 @@
+num=int(input("Ingrese el número que quiera procesar: "))
+def sumaDigitos(num):
+    suma=0
+    while num !=0:
+        digito=num%10
+        suma=suma+digito
+        num=num//10
+    return suma
+
+while num!=0:
+    print("La suma de los digitos es:",sumaDigitos(num))
+    num=int(input("Ingrese otro número, si quiere finalizar el proceso ingrese un cero: "))
+print("El proceso a finalizado")
