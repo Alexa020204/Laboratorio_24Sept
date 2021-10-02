@@ -1,0 +1,21 @@
+#1.	Solicitar al usuario que ingrese su dirección de correo electrónico. Imprimir un mensaje indicando si la dirección es válida o no, valiéndose de una función para decidirlo. Una dirección se considerará válida si contiene el símbolo "@".
+
+cond="si"
+def validar(email):
+    respuesta=False
+    if "@" in email:
+        respuesta=True
+    return respuesta
+
+while cond=="si":
+    direccion=input("Ingrese su correo: ")
+    if validar(direccion):
+        print("El correo es válido...")
+        break
+    else:
+        print("El correo no es valido")
+        cond=input("¿Quiere colver a intentarlo?(si o no): ")
+      
+             
+print("El programa ha terminado, gracias por utilizarlo :)")
+        
