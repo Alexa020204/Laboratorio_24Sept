@@ -1,0 +1,22 @@
+#Solicitar números al usuario hasta que ingrese el cero. Por cada uno, mostrar la suma de sus dígitos. Al finalizar, mostrar la sumatoria de todos los números ingresados y la suma de sus dígitos. Reutilizar la misma función realizada en el ejercicio 2.
+
+
+def sumaDigitos(num):
+    suma = 0
+    while num != 0:
+        digito = num % 10
+        suma = suma+digito
+        num = num//10
+    return suma
+
+sumatoriadig=0
+sumatoria = 0
+num = int(input("Ingrese un número: "))
+while num != 0:
+    print("La suma de los digitos del número es:", sumaDigitos(num))
+    sumatoria = sumatoria+num
+    sumatoriadig+=sumaDigitos(num)
+    num = int(input("Ingrese otro número, si quiere para ingrese el 0: "))
+print("Sumatoria de los números ingresados:", sumatoria)
+print("La suma de los digitos:", sumatoriadig)
+
