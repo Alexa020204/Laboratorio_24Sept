@@ -1,0 +1,14 @@
+def frecuencia(numero,digito):
+    cantidad=0
+    while numero!=0:
+        ultimoDigito=numero%10
+        if ultimoDigito==digito:
+           cantidad+=1
+    numero//10
+if condi=="sí":
+    numero = int(input("Ingrese un número: "))
+    digito = int(input("Ingrese un digito: "))
+    print("Frecuencia del dígito en el numero es: ", frecuencia(numero, digito))
+    cond = input("quieres volver a ingresar un numero y un digito = ¿si o no?")
+    if cond == "no":
+       print("vuelve pronto amigo....(saludos desde Tibú)")
