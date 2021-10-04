@@ -1,0 +1,31 @@
+#Escribir un programa que pida números positivos al usuario. Mostrar el número cuya sumatoria de dígitos fue mayor y la cantidad de números cuya sumatoria de dígitos fue menor que 10. Utilizar una o más funciones, según sea necesario
+
+cond = "si"
+
+def sumaDigitos(numero):
+  suma = 0
+  while numero != 0:
+      digito = numero % 10
+      suma = suma+digito
+      numero = numero//10
+  return suma
+
+
+cantidad=0
+mayor=-1
+
+while cond=="si":
+    numero = int(input("Ingrese un número psoitivo: "))
+    if numero>=0:
+        suma=sumaDigitos(numero)
+        if suma > mayor:
+            mayor=suma
+            mayorsuma=numero
+        if suma <10:
+            cantidad+=1
+        print("Sumatoria de dígitos de",numero,":",suma)
+        cond=input("¿Quiere ingresar otro número(si o no): ")
+    else:
+        print("El número ingresado es incorrecto")
+print("El número de la sumatoria fue mayor es: ",mayorsuma,":",mayor)
+print("Cantidad de número menores que 10:",cantidad)
