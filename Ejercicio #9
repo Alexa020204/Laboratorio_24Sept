@@ -1,0 +1,32 @@
+def frecuencia(numero):
+    cantidad=0
+    while numero!=0:
+        ultinumero=numero%10
+        cantidad+=1
+        numero=numero//10
+    return cantidad
+cond="si"
+while cond=="si":
+    hi=input("""¿Qué documento desea ingresar(opción 1 0 2):
+    1. Cedula ciudadana
+    2. Tarjeta de Identidad:  """)
+    if hi=="1":
+        num=int(input("Ingrese el número de la cédula: "))
+        if frecuencia(num)>=7 and frecuencia(num)<=10:
+            print("El número es válido")
+            cond="no"
+        else:
+            print("El número es invalido")
+            cond=input("¿Quiere ingresar otro número(si o no")
+        if cond == "no":
+            print("vuelve pronto amigo....(saludos desde Tibú)")
+    else:
+        num = int(input("Ingrese el número de la tarjeta: "))
+        if frecuencia(num) ==10:
+            print("El número es válido")
+            cond = "no"
+        else:
+            print("El número es invalido")
+            cond = input("¿Quiere ingresar otro número(si o no): ")
+        if cond == "no":
+            print("vuelve pronto amigo....(saludos desde Tibú)")
