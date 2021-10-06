@@ -16,7 +16,7 @@ while num != 0:
     print("La suma de los digitos del número es:", sumaDigitos(num))
     sumatoria = sumatoria+num
     sumatoriadig+=sumaDigitos(num)
-    num = int(input("Ingrese otro número, si quiere para ingrese el 0: "))
+    num = int(input("Ingrese otro número, si quiere parar ingrese el 0: "))
 print("Sumatoria de los números ingresados:", sumatoria)
 print("La suma de los digitos:", sumatoriadig)
 
