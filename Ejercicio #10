@@ -1,0 +1,13 @@
+#10.Escribir una función que, dada una cadena, retorne la longitud de la última palabra. Se considera que las palabras están separadas por uno o más espacios. También podría haber espacios al principio o al final del string pasado por parámetro.  Consulta sobre la función len() en Python.
+
+def logultpal(cadena):
+     cadenaInv=cadena[::-1]
+     cadenaEspa=cadenaInv.index(" ")
+     cadenaUlt=cadenaInv[:cadenaEspa]
+     caracteres=len(cadenaUlt)
+     return caracteres
+
+
+
+frase = input("Ingrese una frase, oración o cadena: ") #ave maria cuando seras mia   
+print(logultpal(frase))
